@@ -1,0 +1,56 @@
+﻿{
+  "name": "sshCommand",
+  "type": "flogo:activity",
+  "version": "0.0.1",
+  "title": "SSH Command Activity",
+  "description": "Execute SSH commands on remote servers",
+  "homepage": "https://github.com/mcommiss-tibco/sshCommand",
+  "ref": "github.com/mcommiss-tibco/sshCommand",
+  "author": "Marco Commissaris <marco.commissairs@cloud.com>",
+  "settings": [
+  ],
+  "inputs": [
+    {
+      "name": "sshservername",
+      "type": "string",
+      "description": "SSH server hostname or IP address",
+      "required": true
+    },
+    {
+      "name": "sshserverport",
+      "type": "int",
+      "description": "SSH server port number",
+      "required": true
+    },
+    {
+      "name": "sshusername",
+      "type": "string",
+      "description": "SSH username for authentication",
+      "required": true
+    },
+    {
+      "name": "sshpassword",
+      "type": "string",
+      "description": "SSH password for authentication",
+      "required": true
+    },
+    {
+      "name": "sshcommand",
+      "type": "string",
+      "description": "Command to execute on the remote server",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "name": "statuscode",
+      "type": "int",
+      "description": "Exit status code of the executed command"
+    },
+    {
+      "name": "result",
+      "type": "string",
+      "description": "Output result from the executed command"
+    }
+  ]
+}

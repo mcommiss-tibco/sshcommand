@@ -51,10 +51,10 @@ func (r *Input) ToMap() map[string]interface{} {
 
 	return map[string]interface{}{
 		"sshservername": r.SshServername,
-		// "sshserverport": r.sshServerPort,
-		// "sshusername":   r.SshUsername,
-		// "sshpassword":   r.SshPassword,
-		// "sshcommand":    r.SshCommand,
+		"sshserverport": r.SshServerPort,
+		"sshusername":   r.SshUsername,
+		"sshpassword":   r.SshPassword,
+		"sshcommand":    r.SshCommand,
 	}
 }
 

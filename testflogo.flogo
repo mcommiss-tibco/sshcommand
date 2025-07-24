@@ -2,11 +2,10 @@
   "imports": [
     "github.com/project-flogo/flow",
     "github.com/project-flogo/contrib/activity/noop",
-    "github.com/tibco/flogo-general/src/app/General/trigger/timer",
-    "github.com/mcommiss-tibco/sshcommand"
+    "github.com/tibco/flogo-general/src/app/General/trigger/timer"
   ],
-  "name": "sshcommander",
-  "description": "SSH Command Application",
+  "name": "testflogo",
+  "description": "",
   "version": "1.0.0",
   "type": "flogo:app",
   "appModel": "1.1.1",
@@ -20,32 +19,32 @@
       "id": "TimerTrigger",
       "handlers": [
         {
-          "description": "SSH Command Flow",
+          "description": "",
           "settings": {
             "Scheduler Options": "Timer",
             "Repeating": false,
             "Delayed Start": false,
             "Time Interval": 1,
             "Interval Unit": "Second",
-            "Cron Expression": "CRON_TZ=Europe/Amsterdam * * * * *"
+            "Cron Expression": ""
           },
           "action": {
             "ref": "github.com/project-flogo/flow",
             "settings": {
-              "flowURI": "res://flow:ssh1"
+              "flowURI": "res://flow:New_flow"
             }
           },
-          "name": "ssh1"
+          "name": "New_flow"
         }
       ]
     }
   ],
   "resources": [
     {
-      "id": "flow:ssh1",
+      "id": "flow:New_flow",
       "data": {
-        "name": "ssh1",
-        "description": "SSH Command Flow",
+        "name": "New_flow",
+        "description": "",
         "links": [],
         "tasks": [
           {

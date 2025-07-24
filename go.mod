@@ -1,4 +1,4 @@
-module github.com/mcommiss-tibco/sshCommand
+module github.com/mcommiss-tibco/sshcommand
 
 go 1.23.3
 

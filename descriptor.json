@@ -4,10 +4,19 @@
   "version": "0.0.1",
   "title": "SSH Command Activity",
   "description": "Execute SSH commands on remote servers",
-  "homepage": "https://github.com/mcommiss-tibco/sshCommand",
-  "ref": "github.com/mcommiss-tibco/sshCommand",
+  "ref": "github.com/mcommiss-tibco/sshcommand",
   "author": "Marco Commissaris <marco.commissairs@cloud.com>",
-  "settings": [
+  "settings": [{
+      "name": "logLevel",
+      "type": "string",
+      "required": true,
+      "value": "INFO",
+      "display": {
+        "name": "Log Level",
+        "description": "Set the log level for this activity."
+      },
+      "allowed": ["INFO", "WARN", "ERROR", "DEBUG"]
+    }
   ],
   "inputs": [
     {

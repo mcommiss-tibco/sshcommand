@@ -1,6 +1,8 @@
 ﻿package sshcommand
 
-import "github.com/project-flogo/core/data/coerce"
+import (
+	"github.com/project-flogo/core/data/coerce"
+)
 
 type Settings struct {
 	// No settings needed for SSH command execution

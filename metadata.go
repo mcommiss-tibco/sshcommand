@@ -7,37 +7,37 @@ type Settings struct {
 }
 
 type Input struct {
-	SSHServerName string `md:"sshservername,required"`
-	SSHServerPort int    `md:"sshserverport,required"`
-	SSHUsername   string `md:"sshusername,required"`
-	SSHPassword   string `md:"sshpassword,required"`
-	SSHCommand    string `md:"sshcommand,required"`
+	SshServername string `md:"sshservername,required"`
+	SshServerPort string `md:"sshserverport,required"`
+	SshUsername   string `md:"sshusername,required"`
+	SshPassword   string `md:"sshpassword"`
+	SshCommand    string `md:"sshcommand,required"`
 }
 
 func (r *Input) FromMap(values map[string]interface{}) error {
 	var err error
 
-	r.SSHServerName, err = coerce.ToString(values["sshservername"])
+	r.SshServername, err = coerce.ToString(values["sshservername"])
 	if err != nil {
 		return err
 	}
 
-	r.SSHServerPort, err = coerce.ToInt(values["sshserverport"])
+	r.SshServerPort, err = coerce.ToString(values["sshserverport"])
 	if err != nil {
 		return err
 	}
 
-	r.SSHUsername, err = coerce.ToString(values["sshusername"])
+	r.SshUsername, err = coerce.ToString(values["sshusername"])
 	if err != nil {
 		return err
 	}
 
-	r.SSHPassword, err = coerce.ToString(values["sshpassword"])
+	r.SshPassword, err = coerce.ToString(values["sshpassword"])
 	if err != nil {
 		return err
 	}
 
-	r.SSHCommand, err = coerce.ToString(values["sshcommand"])
+	r.SshCommand, err = coerce.ToString(values["sshcommand"])
 	if err != nil {
 		return err
 	}
@@ -46,12 +46,13 @@ func (r *Input) FromMap(values map[string]interface{}) error {
 }
 
 func (r *Input) ToMap() map[string]interface{} {
+
 	return map[string]interface{}{
-		"sshservername": r.SSHServerName,
-		"sshserverport": r.SSHServerPort,
-		"sshusername":   r.SSHUsername,
-		"sshpassword":   r.SSHPassword,
-		"sshcommand":    r.SSHCommand,
+		"sshservername": r.SshServername,
+		// "sshserverport": r.sshServerPort,
+		// "sshusername":   r.SshUsername,
+		// "sshpassword":   r.SshPassword,
+		// "sshcommand":    r.SshCommand,
 	}
 }
 
